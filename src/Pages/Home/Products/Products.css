@@ -1,0 +1,11 @@
+.products-container h1{
+    text-align: center;
+    margin: 50px 0px;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* place-content: center; */
+    place-items: center;
+    grid-row-gap: 50px;
+}

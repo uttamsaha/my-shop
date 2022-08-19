@@ -1,0 +1,36 @@
+.singleProduct img{
+    width: 300px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.singleProduct{
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+}
+.singleProduct:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.description{
+    margin-bottom: 25px;
+}
+.singleProduct button{
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-size: 18px;
+    width: 70%;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+    /* padding-top: 30px; */
+    cursor: pointer;
+}
+.singleProduct button:hover{
+    background-color: red;
+}
