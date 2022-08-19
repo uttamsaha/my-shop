@@ -10,6 +10,8 @@
     height: 50px;
     margin-bottom: 10px;
     padding-left: 15px;
+    border: 1.5px solid rgb(0, 60, 255);
+    border-radius: 4px;
 }
 .booking-info{
     text-align: center;
@@ -37,5 +39,7 @@
     cursor: pointer;
     margin-top: 20px !important;
     gap:10px;
+}
+.input-area input:focus{
     outline: none;
 }
