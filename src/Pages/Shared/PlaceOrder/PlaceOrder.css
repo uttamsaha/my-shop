@@ -21,3 +21,22 @@
 .booking-info h1{
     color: crimson;
 }
+.input-area button{
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-size: 18px;
+    width: 250px;
+    height: 50px !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+    /* padding-top: 30px; */
+    cursor: pointer;
+    margin-top: 20px !important;
+    gap:10px;
+    outline: none;
+}
