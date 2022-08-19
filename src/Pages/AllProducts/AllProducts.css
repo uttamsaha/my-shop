@@ -1,0 +1,8 @@
+.tools-container{
+    display: grid;
+    grid-template-columns: repeat(4,400px);
+    place-items: center;
+    place-content: center;
+    grid-row-gap: 80px;
+    margin-top: 50px;
+}

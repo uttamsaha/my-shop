@@ -34,3 +34,7 @@
 .singleProduct button:hover{
     background-color: red;
 }
+.product-name{
+    font-size: 25px;
+    font-weight: 600;
+}

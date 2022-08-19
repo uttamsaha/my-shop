@@ -4,10 +4,10 @@
 }
 .products{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    /* place-content: center; */
+    grid-template-columns: repeat(4,400px);
+    place-content: center;
     place-items: center;
-    grid-row-gap: 50px;
+    grid-row-gap: 70px;
 }
 .product-btn{
     border: none;
@@ -15,6 +15,7 @@
     color: white;
     font-size: 18px;
     width: 250px;
+    height: 50px !important;
     margin: 0 auto !important;
     display: flex;
     justify-content: center;
