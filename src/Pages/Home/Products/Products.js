@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
+import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import "./Products.css"
 
 const Products = () => {
@@ -7,7 +8,7 @@ const Products = () => {
     useEffect(()=>{
         fetch('products.json')
         .then(res => res.json())
-        .then(data => setProducts(data))
+        .then(data => setProducts(data.slice(0,8)))
     },[])
   return (
     <div className='products-container'>
@@ -17,6 +18,7 @@ const Products = () => {
             products.map(product => <SingleProduct key={product.id} product={product}></SingleProduct>)
           }
         </div>
+        <button className='product-btn'>See All Products <BsFillArrowRightCircleFill/></button>
     </div>
   )
 }
