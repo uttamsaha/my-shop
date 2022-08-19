@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './Banner.css'
 
 const Banner = () => {
   return (
-    <div>Banner</div>
+    <div className='banner'>
+        <div className="banner-items">
+        <h2>Welcome to MyShop</h2>
+        <h1>Buy One Get One Free!</h1>
+        </div>
+    </div>
   )
 }
 
