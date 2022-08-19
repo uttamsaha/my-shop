@@ -1,0 +1,17 @@
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+    height: 100px;
+    background-color: #1D293A;
+    align-items: center;
+}
+
+.nav-items ul {
+    display: flex;
+    gap: 25px;
+}
+.nav-items ul li a, .logo{
+    color: white;
+}
