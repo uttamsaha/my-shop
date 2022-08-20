@@ -1,0 +1,11 @@
+.post-container h1{
+    text-align: center;
+    margin: 20px 0px;
+}
+.posts{
+    display: grid;
+    grid-template-columns: repeat(4, 400px);
+    place-items: center;
+    place-content: center;
+    grid-row-gap: 50px;
+}
