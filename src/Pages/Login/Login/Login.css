@@ -104,3 +104,6 @@ button:hover{
     margin-left: 20px;
     text-decoration: underline;
 }
+.loading{
+    text-align: center;
+}

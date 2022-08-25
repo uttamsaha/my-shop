@@ -1,0 +1,8 @@
+.email-verify{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.email-verify h2{
+    color: blue;
+}
