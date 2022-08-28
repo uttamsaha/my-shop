@@ -3,9 +3,11 @@ import './Login.css'
 import {ImGooglePlus3} from 'react-icons/im';
 import {FaGithub} from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithGoogle, useSignInWithGithub,useCreateUserWithEmailAndPassword, useUpdateProfile, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle, useSignInWithGithub,useCreateUserWithEmailAndPassword, useUpdateProfile, useSignInWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { async } from '@firebase/util';
+import swal from 'sweetalert';
+
 
 
 const Login = () => {
@@ -18,18 +20,17 @@ const Login = () => {
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const [createUserWithEmailAndPassword,user2,loading2,error2] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, updating, error3] = useUpdateProfile(auth);
-    const [
-        signInWithEmailAndPassword,
-        user3,
-        loading3,
-        error4,
-      ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword,user3,loading3,error4] = useSignInWithEmailAndPassword(auth);
+    const [sendEmailVerification, sending, error5] = useSendEmailVerification(auth);
 
       //signUp
       const  signUp = async(event) => {
         event.preventDefault();
         await createUserWithEmailAndPassword(email,password);
         await updateProfile({ displayName});
+        await sendEmailVerification();
+        swal("Email Verification Sent!", "Please Verify your email first.!", "success");
+
       }
 
       //login 

@@ -6,6 +6,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
 import auth from "../../../firebase.init";
+import NotVerified from "../../Shared/NotVerified/NotVerified";
 
 const RequireAuth = ({ children }) => {
   const location = useLocation();
@@ -20,21 +21,7 @@ const RequireAuth = ({ children }) => {
   }
   if (!user.emailVerified) {
     return (
-      <div className="email">
-        <div className="email-verify">
-        <h3 className="text-danger">Your Email is not verified</h3>
-        <h5 className="text-primary">Please Verify your email first</h5>
-        <button
-          className="btn btn-danger mt-1"
-          onClick={async () => {
-            await sendEmailVerification();
-            alert("email sent. Please verify..")
-          }}
-        >
-          Send Verification Email Again
-        </button>
-        </div>
-      </div>
+     <NotVerified></NotVerified>
     );
   }
   return children;
